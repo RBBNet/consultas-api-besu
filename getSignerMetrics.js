@@ -48,7 +48,7 @@ const maxLength = rpcData.reduce((max, val) => Math.max(max, (accountToInstituic
     const filteredData = rpcData.map(data => {
       const address = accountToInstituicao[data.address] || data.address;
       const lastProposedBlockNumber = parseInt(data.lastProposedBlockNumber, 16); // Converting hex to decimal
-      return `${address.padEnd(maxLength + 5)}[ Last Block: ${lastProposedBlockNumber} ]`;
+      return `${address.padEnd(maxLength + 5)}[ Latest Block: ${lastProposedBlockNumber} ]`;
    }).sort(); // Sort the data alphabetically
    
 
